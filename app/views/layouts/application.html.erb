@@ -14,11 +14,11 @@
         <%= link_to root_path, class: 'logo' do %>
         <div class="circle">
           <br />
-          Quoters
+          Golfers
           <br />
-          Gonna
+          Talking
           <br />
-          Quote
+          Smack
         </div>
       <% end %>
       </div>
@@ -35,6 +35,11 @@
     <br class="clear" />
 
   <div class="container">
+    <% if flash[:error].present? %>
+      <div class="col-10 offset-1 alert alert-danger">
+        <%= flash[:error].html_safe %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>  
 
